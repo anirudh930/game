@@ -21,7 +21,7 @@ app.configure(function(){
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
-  //app.use(express.static(path.join(__dirname, 'public')));
+  app.use(express.static(path.join(__dirname, 'public')));
 });
 
 app.configure('development', function(){
@@ -32,9 +32,11 @@ app.configure('development', function(){
 We don't need any routing here.
 **/
 
-//app.get('/', routes.index);
+app.get('/', routes.index);
 //app.get('/users', user.list);
 //app.get('/mobile', mobile.display);
+
+
 
 var server = http.createServer(app)
 
@@ -45,15 +47,14 @@ server.listen(app.get('port'), function(){
 var socketsHandle = io.listen(server);
 
 socketsHandle.sockets.on('connection', function(socket){
+	/**
 	var isMobile = false;
 	if (/mobile/i.test(isMobile))
 		isMobile = true;
     
     if (isMobile == true) {
-    	app.get('/', mobile.display);	
     }
-	else {
-		app.get('/', routes.index);
+	else {**/
 		setInterval(function(){socket.emit('move', {x:50, y:0})}, 5000);	
-	}	
+	//}	
 });
