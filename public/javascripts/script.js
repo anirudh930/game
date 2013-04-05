@@ -48,7 +48,7 @@ function init() {
 	
 	runner = new Runner();
 	
-	socket = io.connect('http://localhost:3000');
+	socket = io.connect('http://localhost:80');
 	
 	if (socket == null) {
 		console.log("Socket is null");	
