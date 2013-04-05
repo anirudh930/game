@@ -3,12 +3,24 @@
 
 <head>
 	
+	<meta charset="UTF-8">
+	<!--<meta name="viewport" content="width=device-width, 
+					initial-scale=1.0, user-scalable=no">-->
+		
+	<title>Race!</title>
+	<link rel="stylesheet" type= "text/css" href="stylesheets/game.css"/>
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	
+	 <script src="http://playwithmobile.azurewebsites.net/socket.io/socket.io.js"></script>
+	
+	<script type="text/javascript" src="javascripts/mobilescript.js"></script>
 	
 </head>
 
 <body>
 	<h1>Welcome <%= title %>!</h1>
-	<canvas id="game" width="400" height="400"> 
+	<canvas id="mobilecanvas" width="1000" height="1000"> 
 		Canvas not supported in your browser.
 	</canvas>
 </body>

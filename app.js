@@ -55,6 +55,13 @@ socketsHandle.sockets.on('connection', function(socket){
     if (isMobile == true) {
     }
 	else {**/
-		setInterval(function(){socket.emit('move', {x:50, y:0})}, 5000);	
-	//}	
+		//setInterval(function(){socket.emit('move', {x:50, y:0})}, 5000);	
+	//}
+	console.log("Recvd. a connection!");	
+	socket.on('mobiletouch', function  (data) {
+  		console.log("Received a touch " + data.message);
+  		var dist = 50 * data.message
+  		socketsHandle.sockets.emit('move', {x:dist, y:0});
+  	});
+  
 });
