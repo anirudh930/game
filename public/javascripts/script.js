@@ -48,7 +48,7 @@ function init() {
 	
 	runner = new Runner();
 	
-	socket = io.connect('http://localhost:80');
+	socket = io.connect('http://playwithmobile.azurewebsites.net/');
 	
 	if (socket == null) {
 		console.log("Socket is null");	
