@@ -48,7 +48,7 @@ function init() {
 	
 	runner = new Runner();
 	
-	socket = io.connect('http://playwithmobile.azurewebsites.net');
+	socket = io.connect('http://playwithmobile.azurewebsites.net:3000');
 	
 	socket.on('move', function(data) {
 		animate(data);	

@@ -47,7 +47,7 @@ function init() {
 	
 	draw();	
 	
-	socket = io.connect('http://playwithmobile.azurewebsites.net');
+	socket = io.connect('http://playwithmobile.azurewebsites.net:3000');
 	
 	// Call preventDefault on touchmove or touchstart
 	
