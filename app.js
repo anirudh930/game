@@ -55,7 +55,7 @@ socketsHandle.sockets.on('connection', function(socket){
     if (isMobile == true) {
     }
 	else {**/
-		//setInterval(function(){socket.emit('move', {x:50, y:0})}, 5000);	
+		setInterval(function(){socket.emit('move', {x:50, y:0})}, 5000);	
 	//}
 	console.log("Recvd. a connection!");	
 	socket.on('mobiletouch', function  (data) {
