@@ -50,7 +50,12 @@ function init() {
 	
 	socket = io.connect('http://playwithmobile.azurewebsites.net');
 	
+	if (socket == null) {
+		console.log("Socket is null");	
+	}
+	
 	socket.on('move', function(data) {
+		console.log("About to animate!");
 		animate(data);	
 	});
 	
